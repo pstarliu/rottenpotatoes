@@ -44,13 +44,21 @@ NOTE: The steps below are for creating a new app.  The initial version
 of RottenPotatoes was created with Rails 3.0.5 and Ruby 1.8.7 using the
 commands:
 
-* <tt>rails new rottenpotatoes -J -T</tt>
+* <tt>rails new rottenpotatoes -J -T</tt> (creates a new app without
+including JavaScript templates and without creating directories for
+Test::Unit, since we use RSpec instead)
 * <tt>cd rottenpotatoes</tt>
-* <tt>rails generate resource movie title:string rating:string description:text released_on:datetime</tt>
-* <tt>rake db:migrate</tt>
-* <tt>rails generate cucumber:install</tt>
-* <tt>rails generate rspec:install</tt>
-* <tt>rm public/index.html</tt>
+* <tt>rails generate resource movie title:string rating:string
+description:text released_on:datetime</tt> (generates a skeleton model,
+RESTful controller, RESTful views, test skeletons, and a database
+migration for a RESTful resource called 'movie')
+* <tt>rake db:migrate</tt> (runs the migration to setup the Movies table)
+* <tt>rails generate cucumber:install</tt> (generates files and
+directories needed by Cucumber)
+* <tt>rails generate rspec:install</tt>  (generates files and
+directories needed by RSpec)
+* <tt>rm public/index.html</tt>  (removes the default static homepage installed
+by Rails)
 
 and then filling in the basic code for the Movie model, views and controller.
 
