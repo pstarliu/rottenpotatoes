@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Movie do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'calling TMDb' do
+    it 'should call the TMDb gem to do the search' do
+      Tmdb
+  end
 end
