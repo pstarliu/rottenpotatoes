@@ -7,12 +7,15 @@ gem 'rails', '3.1'
 
 gem 'sqlite3', '~> 1.3.3'
 gem 'haml'
+gem 'rake', '0.8.7'
 
 group :test, :development do
   gem 'capybara'
   gem 'cucumber-rails'
+  gem 'cucumber'
   gem 'rspec-rails'
-  gem 'ruby-debug'
+  gem 'rspec'
+  gem 'ruby-debug19'
 end
 
 # Bundle the extra gems:
